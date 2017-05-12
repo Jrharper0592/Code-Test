@@ -39,7 +39,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git URL here"
+        "url": "git@github.com:Jrharper0592/Code-Test.git"
     },
     "keywords": [
         "css",
@@ -70,4 +70,3 @@
     },
     "author": "The Iron Yard Front End studentz",
     "license": "MIT"
-}
