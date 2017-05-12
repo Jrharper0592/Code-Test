@@ -1,0 +1,62 @@
+{
+  "name": "jsnox",
+  "version": "1.0.1",
+  "description": "Write concise React components without JSX",
+  "main": "jsnox.js",
+  "scripts": {
+    "jshint": "jshint jsnox.js tests",
+    "test": "./node_modules/tape/bin/tape tests/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/af/jsnox"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "jsx"
+  ],
+  "author": {
+    "name": "Aaron Franks",
+    "url": "http://aaronfranks.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/af/jsnox/issues"
+  },
+  "homepage": "https://github.com/af/jsnox",
+  "devDependencies": {
+    "ghooks": "^0.3.0",
+    "jshint": "2.7.0",
+    "react": "0.12.1",
+    "tape": "^3.0.3"
+  },
+  "config": {
+    "ghooks": {
+      "pre-push": "npm test && npm run jshint"
+    }
+  },
+  "gitHead": "7620229ef5aec924d565698e6248000757968e51",
+  "_id": "jsnox@1.0.1",
+  "_shasum": "13e3d3967e0bf62d885e6f9a0e7b85e6c63158fc",
+  "_from": "jsnox@>=1.0.0 <2.0.0",
+  "_npmVersion": "2.7.6",
+  "_nodeVersion": "0.10.37",
+  "_npmUser": {
+    "name": "af",
+    "email": "aaron.franks+npm@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "af",
+      "email": "aaron.franks+npm@gmail.com"
+    }
+  ],
+  "dist": {
+    "shasum": "13e3d3967e0bf62d885e6f9a0e7b85e6c63158fc",
+    "tarball": "http://registry.npmjs.org/jsnox/-/jsnox-1.0.1.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/jsnox/-/jsnox-1.0.1.tgz",
+  "readme": "ERROR: No README data found!"
+}
