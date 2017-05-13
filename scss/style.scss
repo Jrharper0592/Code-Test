@@ -261,13 +261,15 @@ p {
 	transition-delay: 0s;
 	z-index:2;
 }
-.overlay:hover{
+.overlay:hover {
 		border-radius:10%;
     	transition-property: border-radius;
 	    transition-duration: 0.5s;
 	    transition-timing-function: linear;
 	    transition-delay: 0s;
+	        
 }
+
 .clickMe {
 	background-color: black;
 	opacity:0.3;
@@ -277,7 +279,8 @@ p {
 	border-radius:50%;
 	z-index:1;
 	display:none;
-}
+}  
+
 .clickText {
 	color:white;
 	margin-left: 30px;
