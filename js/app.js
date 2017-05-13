@@ -14,7 +14,7 @@ function app(){
         {url: "./dist/style.css"},
         //js
         {url: "./bower_components/jquery/dist/jquery.min.js"},
-        {url: "./bower_components/lodash/lodash.min.js"},
+        //{url: "./bower_components/lodash/lodash.min.js"},
 
         // when using just Backbone, use this line
         // {url: "./bower_components/backbone/backbone.js"},
@@ -28,8 +28,9 @@ function app(){
         // other stuff
         {url: "./bower_components/pace/pace.min.js"},
         {url: "./js/TemplateView.js"},
-        {url: "./js/Router.js"},
-        {url: "./js/Homeview.js"}
+        {url: "./js/Functions.js"}
+        //{url: "./js/Router.js"},
+        //{url: "./js/Homeview.js"}
     ).then(function(){
         // if turning on JSnoX, uncommment the following line
         // window.d = jsnox(React);

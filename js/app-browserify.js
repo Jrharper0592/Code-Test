@@ -1,45 +1,47 @@
-;(function(exports){
+"use strict";
 
-    "use strict";
+//////////////////////////////////////////////////
+/// These require calls will be in your
+/// modules/files, not in app-browserify.js.
+///
+/// app-browserify.js will then require() your prerequisites.
+///
+/// Here's how to include
+/// various libs with require...
+//////////////////////////////////////////////////
+//
+// -- when using Backbone, use this line
+// var Backbone = require("backbone")
+// -- when using Parse, comment out the above line and uncomment the line below
+// var Parse = require("parse").Parse
+//
+// -- when using React (and the plugin JSnoX), uncomment the following two lines
+// var React = require("react")
+// var d = require("jsnox")(React)
+//
+// -- if turning on React, uncomment the following line
+// React.initializeTouchEvents(true);
+//
+// -- if using TemplateView, uncomment the following three lines
+// var $ = require("jquery")
+// var _ = require("lodash")
+// (typeof Parse !== "object" ? Parse : Backbone).TemplateView = require("./TemplateView.js").TemplateView(Backbone, _, $)
+//
+//////////////////////////////////////////////////
 
-    exports.TemplateView = function createTemplateView(backboneOrParse, _, $){
-        return backboneOrParse.View.extend({
-            cache: {},
-            stream: function(url) {
-                var x = $.Deferred();
-                if (this.cache[url]) {
-                    x.resolve(this.cache[url]);
-                } else {
-                    $.get(url).then((function(d) {
-                        this.cache[url] = _.template(d);
-                        x.resolve(_.template(d));
-                    }).bind(this));
-                }
-                return x;
-            },
-            loadTemplate: function(name) {
-                return this.stream('./Templates/' + name + '.html');
-            },
-            initialize: function(options) {
-                this.options = options || {};
+// es6 polyfills, powered by babel
+require("babel/register")
 
-                this.model && this.model.on("change", this.render.bind(this));
-                this.collection && this.collection.on("sync", this.render.bind(this));
-            },
-            render: function() {
-                var self = this;
-                this.loadTemplate(this.options.view || this.view).then(function(fn) {
-                    var d = self.model || self.collection;
-                    self.el.innerHTML = fn({
-                        data: d
-                    });
-                })
-            }
-        })
-    }
+// other stuff that we don't really use in our own code
+var Pace = require("../bower_components/pace/pace.js")
 
-    if(typeof module !== "object"){
-        (window.Parse || window.Backbone)["TemplateView"] = TemplateView(window.Parse || window.Backbone, _, $)
-    }
+// require your own libraries, too!
+// var _777 = require("./777.js")
 
-})(typeof module === "object" ? module.exports : window);
+window.onload = app;
+
+function app(){
+    document.querySelector("html").style.opacity = 1;
+    // start app?
+    // new _777.SevensRouter();
+}
